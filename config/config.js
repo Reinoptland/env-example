@@ -1,3 +1,6 @@
+// when migrations or seeds get run, index.js does not get run
+require("dotenv").config();
+
 module.exports = {
   development: {
     url: process.env.DATABASE_URL_DEV,
