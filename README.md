@@ -5,10 +5,23 @@ This is a simple server template to for my students to start projects quickly.
 ## Table of contents:
 
 - **[Setup](#setup-how-to-use-this-template)**
+- **[ENV](#env)**
 - **[Endpoints](#endpoints)**
 - **[Sample requests with axios](#sample-requests-with-axios)**
 - **[Sample requests with httpie](#sample-requests-with-httpie)**
 - **[History of this project (pullrequests)](#history-of-this-project)**
+
+## env
+
+This is an example .env file put in your own keys
+
+```
+DATABASE_URL_DEV=<POSTGRESURL HERE>
+GOOGLE_MAPS_API_KEY=<MAPS_API_KEY_HERE>
+```
+
+[Get a hosted postgres here](https://www.elephantsql.com/)
+[Get your maps api key here](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
 ## SETUP How to use this template
 
@@ -45,10 +58,9 @@ Default config is setup for usage with an ElephantSQL database instance, you nee
     "url": "YOUR_ELEPHANTSQL_URL_HERE",
     "dialect": "postgres",
     "operatorsAliases": "0"
-  },
+  }
 }
 ```
-
 
 If planning to use this template with a docker database the config object should be changed to:
 
@@ -67,7 +79,6 @@ If planning to use this template with a docker database the config object should
 ```
 
 And you must revert the changes on this line in models/index.js: https://github.com/Codaisseur/express-template/commit/ada7711c8b19c8f240bc61f94743213efe4a77d2#diff-18c449caa39363f82bacb4f7489e7783L15
-
 
 6. Create database, run migrations & seed data
 
