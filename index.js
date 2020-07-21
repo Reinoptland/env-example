@@ -1,3 +1,8 @@
+// Load env variables as early as possible
+require("dotenv").config();
+
+console.log("Maps api key", process.env.GOOGLE_MAPS_API_KEY);
+
 const express = require("express");
 const loggerMiddleWare = require("morgan");
 const corsMiddleWare = require("cors");
